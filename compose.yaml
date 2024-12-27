@@ -1,0 +1,14 @@
+version: "1.0"
+
+services:
+  frontend:
+    image: docker-frontend
+    container_name: docker-frontend-container
+    ports:
+      - 7777:80
+
+  backend:
+    image: docker-backend
+    container_name: docker-backend-container
+    ports:
+      - 1111:1111

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cool Website</title>
+  </head>
+  <body>
+    <h1>Docker is working!</h1>
+    <button onclick="getData()">
+        Click
+    </button>
+
+    <h3 id="result"></h3>
+
+    <script>
+      function getData() {
+        fetch('http://localhost:1111').then(data => {
+          document.getElementById('result').innerText = data.statusText;
+        })
+      }
+    </script>
+  </body>
+</html>
