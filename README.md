@@ -21,6 +21,8 @@ List all images: `docker images`
 
 Create image from Dockerfile: `docker build -t <image-name>:<tag> <path-to-dockerfile-directory>`
 
+Remove image: `docker image rm <image-id>`
+
 ### Compose
 
 Create resources according to compose file: `docker compose up`

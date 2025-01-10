@@ -6,15 +6,28 @@
   </head>
   <body>
     <h1>Docker is working!</h1>
-    <button onclick="getData()">
-        Click
+    <button onclick="pingServer()">
+        Ping Server
     </button>
+  
+    <br>
+
+    <button onclick="pingDatabase()">
+      Ping Server and Database
+    </button>
+
 
     <h3 id="result"></h3>
 
     <script>
-      function getData() {
-        fetch('http://localhost:1111').then(data => {
+      function pingServer() {
+        fetch('http://localhost:1111/ping').then(data => {
+          document.getElementById('result').innerText = data.statusText;
+        })
+      }
+
+      function pingDatabase() {
+        fetch('http://localhost:1111/db').then(data => {
           document.getElementById('result').innerText = data.statusText;
         })
       }
